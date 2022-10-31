@@ -8,7 +8,9 @@ export const MenuBar = () => {
     }
     return (
         <>
-
+            {isAdd && 
+                <div onClick={()=> setIsAdd(false)} className="w-full min-h-screen  fixed z-[100] top-0 backdrop-blur-sm"></div>
+            }
             <div className="bg-white w-full h-11 fixed bottom-0 border-t flex">
                 <div onClick={() =>action(true)} className="w-16 h-16 rounded-full bg-primary shadow text-white flex items-center justify-center mx-auto -mt-7 border-4 border-third">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8">
@@ -18,7 +20,10 @@ export const MenuBar = () => {
                     {/* <i className="icon-access_time"></i> */}
                 </div>
             </div>
-            {isAdd && <AddSpent action={action} />}
+            <div className="z-[101] fixed">
+                {isAdd && <AddSpent action={action} />}
+
+            </div>
         </>
     );
 };

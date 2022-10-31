@@ -9,6 +9,9 @@ export const spentSlice = createSlice({
         spents: []
     },
     reducers: {
+        refreshData(state){
+          state.spents = loadFromLocalStorage()
+        },
         saveToLocalStorage(state, action) {
           const newSpent = action.payload
           const prevSpent = loadFromLocalStorage()
@@ -22,9 +25,15 @@ export const spentSlice = createSlice({
           state.spents = loadFromLocalStorage()
           console.log(state.spents);
         },
-        refreshData(state){
+        removeData(state, action){
+          const id = action.payload
+          const prevSpent = loadFromLocalStorage()
+          prevSpent.splice(prevSpent.findIndex(spent => spent.id === id), 1)
+          const serialisedState = JSON.stringify(prevSpent);
+          localStorage.setItem("my-spents", serialisedState);
           state.spents = loadFromLocalStorage()
-        }
+        },
+
     }
 })
 

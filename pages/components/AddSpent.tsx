@@ -2,15 +2,23 @@
 import { SpentType } from '../enum'
 import * as React from 'react';
 import { useForm, useFormState } from "react-hook-form";
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { Spent } from '../interface';
 import { useDispatch, useSelector } from 'react-redux';
 import { spentAction } from '../store/spent-slice';
+import useOutsideClick from './useOutsideClick';
 // type Props = {
     
 // };
 export const AddSpent = ({action}: any) => {
+    // const ref = useRef();
+
+    // useOutsideClick(ref, () => {
+    //     action(false)
+    //     console.log('outside clicked');
+        
+    // });
     const test = useSelector(state => state.spents)
     const {register,resetField, handleSubmit, formState: { errors } }= useForm();
     const [data, setData] = useState<Spent[]>([]);
@@ -29,7 +37,7 @@ export const AddSpent = ({action}: any) => {
         resetField("date")
     }
     return (
-        <div className='fixed -bottom-[15%] w-full z-50 p-4 rounded-t-2xl bg-white slide-top border'>
+        <div   className='fixed -bottom-[15%] w-full z-50 p-4 rounded-t-2xl bg-white slide-top border'>
             <div className='flex justify-center bg-primary pt-1 absolute w-full top-0 left-0 rounded-t-2xl'>
                 <div className='bg-white w-full h-3 rounded-t-2xl'></div>
             </div>
