@@ -28,7 +28,7 @@ const Home: NextPage = () => {
     dispatcher(spentAction.refreshData())
   }, [])
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-third font-gilroy">
+    <div className="flex max-w-5xl mx-auto flex-col items-center justify-center bg-third font-gilroy">
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />

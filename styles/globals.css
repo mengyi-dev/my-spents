@@ -1,7 +1,7 @@
 
 /* @import url(https://dipmart-frontend-s3.s3.ap-southeast-1.amazonaws.com/icons.css?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDOGV44TNSWC4WE4/20221027/ap-southeast-1/s3/aws4_request&X-Amz-Date=20221027T095530Z&X-Amz-Expires=900&X-Amz-Signature=1e655696d3a467967d4270f63c590369e9253b287fa60da0431bb5d055fddcd5&X-Amz-SignedHeaders=host); */
 
-@import url(https://vercel-hosting-icons.vercel.app/icons.css);
+/* @import url(https://vercel-hosting-icons.vercel.app/icons.css); */
 
 @tailwind base;
 @tailwind components;
@@ -137,28 +137,56 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-.slide-left {
-	-webkit-animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+.slide-right {
+	-webkit-animation: slide-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
-@-webkit-keyframes slide-left {
+
+@-webkit-keyframes slide-right {
   0% {
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
   100% {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
   }
 }
-@keyframes slide-left {
+@keyframes slide-right {
   0% {
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
   100% {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+}
+
+
+.slide-fwd-center {
+	-webkit-animation: slide-fwd-center 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-fwd-center 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes slide-fwd-center {
+  0% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+  }
+  100% {
+    -webkit-transform: translateZ(160px);
+            transform: translateZ(160px);
+  }
+}
+@keyframes slide-fwd-center {
+  0% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+  }
+  100% {
+    -webkit-transform: translateZ(160px);
+            transform: translateZ(160px);
   }
 }

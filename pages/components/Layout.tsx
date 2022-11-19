@@ -4,8 +4,8 @@ import { MenuBar } from './MenuBar';
 
 export const Layout = ({children}) => {
     return (
-        <div className="absolute top-0 w-full h-screen bg-white ">
-            <header className="flex justify-between w-full p-4">
+        <div className="top-0 w-full h-screen bg-white fixed">
+            <header className="flex max-w-5xl justify-between mx-auto p-4">
                 <h1 className="font-gilroy font-bold text-xl">Home</h1>
                 
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">

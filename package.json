@@ -3,9 +3,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "convertIcons": "fantasticon public/assets/icons -o public/assets/icons-dist"
   },
   "dependencies": {
+    "@mobiscroll/cli": "^1.7.3",
     "@reduxjs/toolkit": "^1.8.6",
     "dateformat": "^5.0.3",
     "moment": "^2.29.4",

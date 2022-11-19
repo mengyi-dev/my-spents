@@ -31,7 +31,7 @@ export const SpentList = () => {
         dispatcher(spentAction.refreshData())
     }, [])
     return (
-        <div className='bg-third max-h-screen absolute top-[35%] w-full left-0 z-0 p-4'>
+        <div className='bg-third absolute top-[35%] w-full left-0 z-0 p-4'>
             <h1 className='font-bold mt-[35%]'>Filter</h1>
             <div className='font-bold flex items-center gap-4 mt-2'>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
@@ -41,7 +41,7 @@ export const SpentList = () => {
                 <div className='text-gray-500 bg-gray-200 max-w-[100px] px-3 py-1 rounded-full text-center text-xs'>Incomes</div>
             </div>
             <div>
-                <div className='w-full pb-10'>
+                <div className='w-full'>
                     {allSpents ? allSpents.map((spent: any)=>{
                         return (
                             // onClick={() => dispatcher(spentAction.removeData(spent.id))}
@@ -49,9 +49,7 @@ export const SpentList = () => {
                                 <div key={spent.id} {...bind()}  className='mt-5 flex-shrink-0 bg-white rounded-xl flex justify-between items-center pr-6 p-1 relative'>
                                     <div className='flex gap-3 items-center'>
                                         <div className='text-primary bg-green-100 w-14 h-14 flex items-center justify-center rounded-xl'>
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-                                                <path fillRule="evenodd" d="M7.5 6v.75H5.513c-.96 0-1.764.724-1.865 1.679l-1.263 12A1.875 1.875 0 004.25 22.5h15.5a1.875 1.875 0 001.865-2.071l-1.263-12a1.875 1.875 0 00-1.865-1.679H16.5V6a4.5 4.5 0 10-9 0zM12 3a3 3 0 00-3 3v.75h6V6a3 3 0 00-3-3zm-3 8.25a3 3 0 106 0v-.75a.75.75 0 011.5 0v.75a4.5 4.5 0 11-9 0v-.75a.75.75 0 011.5 0v.75z" clipRule="evenodd" />
-                                            </svg>
+                                            <i className={`icon-${spent.type} text-4xl`}></i>
                                         </div>
                                         <div className='leading-7'>
                                             <h2 className='font-bold text-sm'>{spent.title}</h2>
@@ -60,7 +58,7 @@ export const SpentList = () => {
                                     </div>
                                     <span className='font-bold text-xs text-primary'>$ {spent.amount}</span>
                                     {isEdit &&
-                                        <div onClick={() => dispatcher(spentAction.removeData(spent.id))} className={`bg-red-500 absolute right-0 w-2/12 h-full rounded-r-xl items-center justify-center text-white flex slide-left`}>
+                                        <div onClick={() => dispatcher(spentAction.removeData(spent.id))} className={`bg-red-500 absolute right-0 w-2/12 h-full rounded-r-xl items-center justify-center text-white flex slide-fwd-center`}>
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
                                                 <path fillRule="evenodd" d="M5.625 1.5H9a3.75 3.75 0 013.75 3.75v1.875c0 1.036.84 1.875 1.875 1.875H16.5a3.75 3.75 0 013.75 3.75v7.875c0 1.035-.84 1.875-1.875 1.875H5.625a1.875 1.875 0 01-1.875-1.875V3.375c0-1.036.84-1.875 1.875-1.875zM9.75 14.25a.75.75 0 000 1.5H15a.75.75 0 000-1.5H9.75z" clipRule="evenodd" />
                                                 <path d="M14.25 5.25a5.23 5.23 0 00-1.279-3.434 9.768 9.768 0 016.963 6.963A5.23 5.23 0 0016.5 7.5h-1.875a.375.375 0 01-.375-.375V5.25z" />

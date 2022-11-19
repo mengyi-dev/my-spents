@@ -1,0 +1,57 @@
+@font-face {
+    font-family: "icons";
+    src: url("./icons.eot?731a26bd4e3e52b1fc39fe779d67cc77#iefix") format("embedded-opentype"),
+url("./icons.woff2?731a26bd4e3e52b1fc39fe779d67cc77") format("woff2"),
+url("./icons.woff?731a26bd4e3e52b1fc39fe779d67cc77") format("woff");
+}
+
+i[class^="icon-"]:before, i[class*=" icon-"]:before {
+    font-family: icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-beauty:before {
+    content: "\f101";
+}
+.icon-clothes:before {
+    content: "\f102";
+}
+.icon-education:before {
+    content: "\f103";
+}
+.icon-electronics:before {
+    content: "\f104";
+}
+.icon-eletronic:before {
+    content: "\f105";
+}
+.icon-entertainment:before {
+    content: "\f106";
+}
+.icon-food:before {
+    content: "\f107";
+}
+.icon-gift:before {
+    content: "\f108";
+}
+.icon-shopping:before {
+    content: "\f109";
+}
+.icon-snack:before {
+    content: "\f10a";
+}
+.icon-telephone:before {
+    content: "\f10b";
+}
+.icon-transport:before {
+    content: "\f10c";
+}
+.icon-travel:before {
+    content: "\f10d";
+}
