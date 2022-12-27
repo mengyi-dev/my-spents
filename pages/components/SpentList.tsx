@@ -1,5 +1,4 @@
 // @flow 
-import * as React from 'react';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { spentAction } from '../store/spent-slice';

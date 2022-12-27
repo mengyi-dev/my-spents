@@ -9,7 +9,7 @@ const withPWA = require("next-pwa")({
     buildExcludes: [/middleware-manifest.json$/],
 })
 module.exports = withOffline(withPWA({
-  reactStrictMode: true,
+  // reactStrictMode: true,
   swcMinify: true,
   i18n: {
     locales: ['en', 'kh',],
