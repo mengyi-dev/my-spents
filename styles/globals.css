@@ -190,3 +190,8 @@ input::-webkit-inner-spin-button {
             transform: translateZ(160px);
   }
 }
+
+
+.numberOfSpent {
+  font-size: 150px;
+}

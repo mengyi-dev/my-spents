@@ -8,18 +8,7 @@ import { Spent } from '../interface';
 import { useDispatch, useSelector } from 'react-redux';
 import { spentAction } from '../store/spent-slice';
 import useOutsideClick from './useOutsideClick';
-// type Props = {
-    
-// };
 export const AddSpent = ({action}: any) => {
-    // const ref = useRef();
-
-    // useOutsideClick(ref, () => {
-    //     action(false)
-    //     console.log('outside clicked');
-        
-    // });
-    const test = useSelector(state => state.spents)
     const {register,resetField, handleSubmit, formState: { errors } }= useForm();
     const [data, setData] = useState<Spent[]>([]);
     const dispatcher = useDispatch()

@@ -3,8 +3,8 @@ import { CircularProgressbarWithChildren } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import { useSelector } from 'react-redux';
 export const ProgressBar = () => {
-    const [income, setIncome] = useState<Number>(290)
-    let spents = useSelector(state => state.spents)
+    const [income, setIncome] = useState<Number>(0)
+    let spents = useSelector((state: any) => state.spents)
     function getOnlyNumberFromObj(): number {
         let number: number = 0
         spents.spents.map((spent)=>{
@@ -16,9 +16,8 @@ export const ProgressBar = () => {
       }
       
     function getNumberOfPercentage(){
-        return getOnlyNumberFromObj() / parseInt(income) * 100 
+        return getOnlyNumberFromObj() / parseInt(String(income)) * 100 
     }
-    console.log(getNumberOfPercentage());
     
     return (
         <div className='rounded-b-3xl bg-white sticky z-10 px-4 max-w-5xl mx-auto'>
@@ -47,10 +46,10 @@ export const ProgressBar = () => {
                     }}
                     strokeWidth={3}
                 >
-                    <div className='text-center text-primary font-bold'>
-                        <h1 className='text-2xl'>${getOnlyNumberFromObj()}</h1>
-                        <p className='text-xs'>Of all incomes ${income}</p>
-                    </div>
+                    <div className='text-center text-primary font-bold text-4xl' dangerouslySetInnerHTML={{__html: 
+                        `<h1 className='numberOfSpent'>${getOnlyNumberFromObj()}</h1>
+                        <p className='text-xs'>Of all incomes ${income}</p>`
+                    }} />
                 </CircularProgressbarWithChildren>
             </div>
         </div>

@@ -30,8 +30,13 @@ const Home: NextPage = () => {
   return (
     <div className="flex max-w-5xl mx-auto flex-col items-center justify-center bg-third font-gilroy">
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>My Spent</title>
+        <meta name="description" content='My spent app, manage your money' />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <link rel="icon" href="/myspent.png" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#911b1e"/>
+        <link rel="apple-touch-icon" href="/icon-256x256.png"></link>
       </Head>
       {isStart && <Layout>
         <ProgressBar />

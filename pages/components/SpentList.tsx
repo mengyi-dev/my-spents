@@ -5,13 +5,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { spentAction } from '../store/spent-slice';
 import dateFormat from 'dateformat';
 import { useLongPress } from 'use-long-press';
-
-import { AddSpent } from './AddSpent';
-type Props = {
-    
-};
 export const SpentList = () => {
-    let spents = useSelector(state => state.spents)
+    let spents = useSelector((state: any) => state.spents)
     const allSpents = spents.spents
     let [isEdit, setIsEdit] = useState(false)
     let num = 0
@@ -68,7 +63,6 @@ export const SpentList = () => {
                                 </div>
 
                             </div>
-
                         )
                     }): null}
                 </div>

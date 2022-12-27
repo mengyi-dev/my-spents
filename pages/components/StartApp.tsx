@@ -9,8 +9,8 @@ export const StartApp = ({action}: any) => {
     }
     return (
         <main className={`'mt-[40%] overflow-x-none bg-third w-full z-[100] sticky flex items-center justify-center' ${isClose && 'slide-out-elliptic-top-bck'}`}>
-            <div className='w-full flex justify-center'>
-                <Image src={startImage} width={300} className='slide-top' />
+            <div className='w-full flex mt-[40%] justify-center items-center'>
+                <Image src={startImage} width={300} className='slide-top absolute bottom-0' />
             </div>
             <div className='bg-white fixed top-[90%] left-0 min-h-full rounded-t-3xl text-center w-full flex flex-col items-center space-y-4 py-4 overflow-none slide-top'>
                 <h1 className='font-gilroyBold text-2xl'>Spending tracker</h1>
